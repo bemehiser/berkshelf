@@ -37,7 +37,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency "mixlib-shellout",      ">= 2.0", "< 4.0"
 
-  s.add_dependency "chef-cleanroom",            "~> 1.0"
+  # Reverted because of https://github.com/chef/berkshelf/issues/56
+  s.add_dependency "cleanroom",            "~> 1.0"
 
   if ruby_version >= Gem::Version.new("3.1.0")
     s.add_dependency "minitar",              "~> 1.0"
